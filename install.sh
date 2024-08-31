@@ -22,9 +22,9 @@ get_init_sys() {
 is_vlc_mmal_present() {
  sed -i 's/geteuid/getppid/' /usr/bin/vlc
  if /usr/bin/vlc -H  2>/dev/null | grep -q -- '--mmal-layer';then
-    return 1
+    return 0
  else
-    return 1
+    return 0
  fi
 }
 
