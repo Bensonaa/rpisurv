@@ -24,7 +24,7 @@ is_vlc_mmal_present() {
  if /usr/bin/vlc -H  2>/dev/null | grep -q -- '--mmal-layer';then
     return 0
  else
-    return 0
+    return 1
  fi
 }
 
